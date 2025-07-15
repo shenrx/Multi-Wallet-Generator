@@ -1,25 +1,20 @@
 const fs = require('fs');
+const figlet = require('figlet');
+const chalk = require('chalk');
 const { Wallet } = require('ethers');
 
 const jumlahWallet = 3; // ubah sesuai kebutuhan
 const outputFile = 'wallets.txt';
 
-// 🖋 Identitas Pembuat Skrip
-const creator = {
-    name: "shenrx",
-    github: "https://github.com/shenrx", // ganti sesuai profilmu
-    project: "Multi-Wallet Generator",
-    version: "1.0.0"
-};
-
-console.log(`
-╔══════════════════════════════════════╗
-║ 🛠 ${creator.project}                     ║
-║ 👤 Dibuat oleh: ${creator.name}             ║
-║ 🌐 GitHub: ${creator.github}           ║
-║ 🗓 Versi: ${creator.version}                   ║
-╚══════════════════════════════════════╝
-`);
+// 🌟 Tampilkan banner identitas
+console.log(
+  chalk.green(
+    figlet.textSync('Multi-Wallet Generator v1.0.0', { horizontalLayout: 'full' })
+  )
+);
+console.log(chalk.cyan.bold('🛠 Dibuat oleh: shenrx'));
+console.log(chalk.cyan('🔗 GitHub: https://github.com/shenrx'));
+console.log(chalk.cyan('🚀 Project: Multi-Wallet Generator v1.0.0\n'));
 
 let output = '';
 
@@ -29,7 +24,13 @@ for (let i = 0; i < jumlahWallet; i++) {
     output += `Address: ${wallet.address}\n`;
     output += `Private Key: ${wallet.privateKey}\n`;
     output += `Mnemonic: ${wallet.mnemonic.phrase}\n\n`;
+
+    // Tampilkan di console dengan warna
+    console.log(chalk.yellow.bold(`🧾 Wallet ${i + 1}`));
+    console.log(chalk.magenta(`Address: ${wallet.address}`));
+    console.log(chalk.red(`Private Key: ${wallet.privateKey}`));
+    console.log(chalk.blue(`Mnemonic: ${wallet.mnemonic.phrase}\n`));
 }
 
 fs.writeFileSync(outputFile, output);
-console.log(`✅ Selesai! ${jumlahWallet} wallet disimpan di ${outputFile}`);
+console.log(chalk.greenBright(`✅ Selesai! ${jumlahWallet} wallet disimpan di ${outputFile}`));
