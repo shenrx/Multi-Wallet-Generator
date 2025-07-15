@@ -6,6 +6,14 @@ const { Wallet } = require('ethers');
 
 const outputFile = 'wallets.txt';
 
+// 🌟 Tampilkan banner identitas
+console.log(
+  chalk.green(figlet.textSync('Multi-Wallet Generator', { horizontalLayout: 'full' }))
+);
+console.log(chalk.cyan.bold('🛠 Dibuat oleh: shenrx'));
+console.log(chalk.cyan('🔗 GitHub: https://github.com/shenrx'));
+console.log(chalk.cyan('🚀 Project: Multi-Wallet Generator v1.0.0\n'));
+
 // 🎯 Input jumlah wallet dari user
 const jumlahWallet = parseInt(
   readline.question(chalk.cyan('Berapa banyak wallet yang ingin dibuat? 👉 '))
@@ -16,14 +24,6 @@ if (isNaN(jumlahWallet) || jumlahWallet < 1) {
   console.log(chalk.red('❌ Masukkan angka yang valid dan lebih dari 0.'));
   process.exit(1);
 }
-
-// 🌟 Tampilkan banner identitas
-console.log(
-  chalk.green(figlet.textSync('Multi-Wallet Generator', { horizontalLayout: 'full' }))
-);
-console.log(chalk.cyan.bold('🛠 Dibuat oleh: shenrx'));
-console.log(chalk.cyan('🔗 GitHub: https://github.com/shenrx'));
-console.log(chalk.cyan('🚀 Project: Multi-Wallet Generator v1.0.0\n'));
 
 let output = '';
 
