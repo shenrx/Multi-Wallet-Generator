@@ -6,7 +6,11 @@
   "scripts": {
     "start": "node generate.js"
   },
+  "author": "shenrx",
+  "license": "MIT",
   "dependencies": {
-    "ethers": "^6.0.0"
+    "chalk": "^4.1.2",
+    "ethers": "^6.0.0",
+    "figlet": "^1.5.2"
   }
 }
