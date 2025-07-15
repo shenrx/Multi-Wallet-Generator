@@ -2,7 +2,8 @@
 
 Fungsi
 - Membuat Wallet EVM dengan jumlah sesuai keinginan
-- Akan tercipta sebuah file wallet.txt
+- Hasil akan tampil di command
+- dan hasil juga akan di export ke wallet.txt
 
 
 Persiapan
