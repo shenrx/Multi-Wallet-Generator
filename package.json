@@ -1,0 +1,12 @@
+{
+  "name": "wallet-generator",
+  "version": "1.0.0",
+  "description": "Skrip untuk membuat wallet menggunakan ethers.js",
+  "main": "generate.js",
+  "scripts": {
+    "start": "node generate.js"
+  },
+  "dependencies": {
+    "ethers": "^6.0.0"
+  }
+}
