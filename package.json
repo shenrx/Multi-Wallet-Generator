@@ -1,6 +1,7 @@
 {
   "name": "multi-wallet-generator",
   "version": "1.0.0",
+  "type": "module",
   "description": "CLI tool for generating Ethereum wallets",
   "main": "generate.js",
   "scripts": {
@@ -13,5 +14,6 @@
     "ethers": "^6.8.0",
     "figlet": "^1.7.0",
     "readline-sync": "^1.4.10"
-  }
+  },
+  "keywords": []
 }
