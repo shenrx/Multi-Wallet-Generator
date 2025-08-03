@@ -1,8 +1,9 @@
-const fs = require('fs');
-const figlet = require('figlet');
-const chalk = require('chalk');
-const readline = require('readline-sync');
-const { Wallet } = require('ethers');
+import fs from 'fs';
+import figlet from 'figlet';
+import chalk from 'chalk';
+import readlineSync from 'readline-sync';
+import { Wallet } from 'ethers';
+
 
 const outputFile = 'wallets.txt';
 
@@ -16,7 +17,7 @@ console.log(chalk.cyan('🚀 Project: Multi-Wallet Generator v1.0.0\n'));
 
 // 🎯 Input jumlah wallet dari user
 const jumlahWallet = parseInt(
-  readline.question(chalk.cyan('Berapa banyak wallet yang ingin dibuat? 👉 '))
+  readlineSync.question(chalk.cyan('Berapa banyak wallet yang ingin dibuat? 👉 '))
 );
 
 // Validasi input
