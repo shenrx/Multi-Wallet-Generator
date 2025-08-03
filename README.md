@@ -15,7 +15,7 @@ Proyek ini menggunakan lisensi MIT
 ## 🛠️ Cara Penggunaan
 1. Persiapan
     ```bash
-    nmp install
+    npm install
 2. Jalankan
     ```bash
     node generate.js
